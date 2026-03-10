@@ -1,0 +1,324 @@
+.ar-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.ar-overlay {
+  position: relative;
+  width: 100%;
+  z-index: 1001;
+}
+
+.ar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+}
+
+.ar-header h2 {
+  color: white;
+  font-size: 1.5em;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.btn-back-round {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-back-round:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+.ar-instructions {
+  text-align: center;
+  padding: 15px 20px;
+  margin: 10px 20px;
+  background: rgba(102, 126, 234, 0.9);
+  border-radius: 15px;
+  color: white;
+  font-size: 1em;
+  line-height: 1.6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.ar-instructions p {
+  margin: 5px 0;
+}
+
+.ar-hint {
+  font-size: 0.85em;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.model-viewer-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+model-viewer {
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+model-viewer > button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.progress-bar {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(102, 126, 234, 0.2);
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+.update-bar {
+  background-color: #667eea;
+  width: 0%;
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+
+.ar-prompt {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ar-view-button {
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ar-view-button:hover,
+.ar-view-button:active {
+  transform: translateX(-50%) scale(0.98);
+  box-shadow: 0 12px 30px rgba(245, 87, 108, 0.6);
+}
+
+.ios-ar-container {
+  width: 100%;
+}
+
+.ios-preview {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ar-view-button-ios {
+  padding: 20px 50px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.3em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(245, 87, 108, 0.5);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.ar-view-button-ios:active {
+  transform: scale(0.95);
+  box-shadow: 0 8px 20px rgba(245, 87, 108, 0.6);
+}
+
+.preview-info {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.preview-info h3 {
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.preview-info p {
+  color: #666;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.ar-footer {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ar-tips {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ar-tips p {
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+  color: #667eea;
+}
+
+.ar-tips ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.95em;
+  line-height: 1.8;
+  color: #555;
+}
+
+.ar-tips li {
+  margin: 8px 0;
+}
+
+.ar-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  color: white;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ar-loading p {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+.ar-error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  padding: 40px;
+  text-align: center;
+}
+
+.ar-error-message p {
+  color: white;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.btn-retry {
+  padding: 15px 40px;
+  background: white;
+  color: #667eea;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-retry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .ar-header {
+    padding: 15px;
+  }
+  
+  .ar-header h2 {
+    font-size: 1.2em;
+  }
+  
+  .btn-back-round {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+  
+  .ar-instructions {
+    font-size: 0.9em;
+    margin: 10px;
+    padding: 12px 15px;
+  }
+  
+  .model-viewer-container {
+    padding: 15px;
+  }
+  
+  .ar-view-button {
+    padding: 15px 30px;
+    font-size: 1em;
+  }
+  
+  .preview-info {
+    padding: 15px;
+    font-size: 0.9em;
+  }
+  
+  .ar-tips {
+    font-size: 0.9em;
+    padding: 15px;
+  }
+}
